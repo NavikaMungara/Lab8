@@ -65,4 +65,23 @@ public class CustomListTest {
         Assertions.assertTrue(exists);
     }
 
+    @Test
+    void testCountCities(){
+        CustomList cityList = MockCityList();
+
+        City city = new City("Toronto", "ON");
+        City city3 = new City("Calgary", "AB");
+        City city4 = new City("Halifax", "NS");
+
+        //add all the cities to the list
+        cityList.addCity(city);
+        cityList.addCity(city3);
+        cityList.addCity(city4);
+
+        //so I already know that the counts is 3
+        int correctCount = 3;
+        Assertions.assertEquals(correctCount, cityList.countCities());
+
+    }
+
 }
