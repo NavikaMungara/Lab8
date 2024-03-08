@@ -41,12 +41,13 @@ public class CustomListTest {
     @Test
     void testHasCity(){
         CustomList cityList = MockCityList();
-        City city = new City("Red Deer", "Alberta");
-        cityList.add(city);
-        Assertions.assertTrue(cityList.getCities().contains(city));
+        cityList.add(new City("Edmonton","AB"));
+        cityList.add(new City("Vancouver","BC"));
+        cityList.add(new City("Toronto","ON"));
 
-        City city2 = new City("Calgary", "Alberta");
-        Assertions.assertFalse(cityList.getCities().contains(city2));
+        City chekcity = new City("Edmonton", "AB");
+
+        Assertions.assertTrue(cityList.hasCity(chekcity));
     }
 
 
