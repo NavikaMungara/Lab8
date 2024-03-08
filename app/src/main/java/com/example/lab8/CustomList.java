@@ -61,13 +61,13 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
-    public boolean hasCity(City city){
-        for(City cty : cities){
-            if(cty.equals(city)){
-                return true;
-            }
-        }
-        return false;
+    public void delete(City city){
+//        if (cities.contains(city)) {
+//            cities.remove(city);
+//        } else{
+//            throw new IllegalArgumentException();
+//        }
+
     }
 
     public List<City> getCities() {

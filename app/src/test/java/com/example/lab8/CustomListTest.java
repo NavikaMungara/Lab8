@@ -38,16 +38,17 @@ public class CustomListTest {
     }
 
 
+
     @Test
-    void testHasCity(){
+    void testDeleteCity(){
         CustomList cityList = MockCityList();
-        cityList.add(new City("Edmonton","AB"));
-        cityList.add(new City("Vancouver","BC"));
-        cityList.add(new City("Toronto","ON"));
-
-        City chekcity = new City("Edmonton", "AB");
-
-        Assertions.assertTrue(cityList.hasCity(chekcity));
+        City city = new City("Vancouver", "BC");
+        cityList.addCity(city);
+        //check if its there
+        if(cityList.getCities().contains(city)){
+            //delete
+            cityList.delete(city);
+        }
     }
 
 
