@@ -55,16 +55,14 @@ public class CustomListTest {
     }
 
     @Test
-    void hasCity(){
+    void testhasCity(){
         CustomList cityList = MockCityList();
         City city = new City("Vancouver", "BC");
         cityList.addCity(city);
+
         //check if its there
-        cityList.hasCity(city);
-
-        City city_two = new City("Toronto", "ON");
-        cityList.hasCity(city);
-
+        Boolean exists = cityList.hasCity(city);
+        Assertions.assertTrue(exists);
     }
 
 }
